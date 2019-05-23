@@ -4,6 +4,8 @@ var path = require("path");
 
 var app = express();
 
+
+function apiRoutes(app) {
 // A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
 app.get("/api/friends", function(req, res) {
     res.sendFile(path.join(__dirname, "friends.js"));
@@ -14,3 +16,5 @@ app.get("/api/friends", function(req, res) {
 app.post("/api/friends", function (req, res) { 
     fs.appendFile('./api/friends.js', res, 'utf8', callback);
  });
+}
+module.exports = apiRoutes;

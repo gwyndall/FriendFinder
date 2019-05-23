@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <!-- Questions via http://www.humanmetrics.com/cgi-win/jtypes2.asp -->
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+        }
+
+        li {
+            margin-bottom: 1.5rem;
+            line-height: 2rem;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 1.5rem;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST">
+        <label for="userName">Name:</label>
+<input type="text" name="userName" id="userName">
+<label for="photo">Link to Photo:</label>
+<input type="url" name="photo" id="photo">
+
+        <ol>
+            <li>You are almost never late for your appointments<br>
+                Strongly Disagree <input type="range" name="q01" min="1" max="5"> Strongly Agree<br>
+            </li>
+            <li>When making a decision, you rely more on your feelings than on analysis of the situation<br>
+                Strongly Disagree <input type="range" name="q02" min="1" max="5"> Strongly Agree<br>
+            </li>
+            <li>You spend your leisure time actively socializing with a group of people, attending parties, shopping,
+                etc.<br>
+                Strongly Disagree <input type="range" name="q03" min="1" max="5"> Strongly Agree<br>
+            </li>
+            <li>You are a person somewhat reserved and distant in communication<br>
+                Strongly Disagree <input type="range" name="q04" min="1" max="5"> Strongly Agree<br>
+            </li>
+            <li>You frequently and easily express your feelings and emotions<br>
+                Strongly Disagree <input type="range" name="q05" min="1" max="5"> Strongly Agree<br>
+            </li>
+            <li>You value justice higher than mercy<br>
+                Strongly Disagree <input type="range" name="q06" min="1" max="5"> Strongly Agree<br>
+            </li>
+            <li>Often you prefer to read a book than go to a party<br>
+                Strongly Disagree <input type="range" name="q07" min="1" max="5"> Strongly Agree<br>
+            </li>
+            <li>When with a group of people, you enjoy being directly involved and being at the centre of attention<br>
+                Strongly Disagree <input type="range" name="q08" min="1" max="5"> Strongly Agree<br>
+            </li>
+            <li>A thirst for adventure is something close to your heart<br>
+                Strongly Disagree <input type="range" name="q09" min="1" max="5"> Strongly Agree<br>
+            </li>
+            <li>Deadlines seem to you to be of relative rather than absolute importance<br>
+                Strongly Disagree <input type="range" name="q10" min="1" max="5"> Strongly Agree<br>
+            </li>
+
+        </ol>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

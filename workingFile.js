@@ -1,3 +1,5 @@
+var fs = require("fs");
+
 dataFile = [
 
     {
@@ -52,12 +54,15 @@ inputData = {
     ]
 }
 var currentScore = 0;
+var scoreArray = [];
 
 // Get compatibility score for each potential friend
 for (let index = 0; index < dataFile.length; index++) {
     const scores = dataFile[index];
     getScore(scores);
-    console.log(scores.name, currentScore);
+    // console.log(scores.name, currentScore);
+    scoreArray.push(currentScore);
+    // console.log(scoreArray);
 }
 
 function getScore(currentValue) {
@@ -80,3 +85,30 @@ function getScore(currentValue) {
     }
     return currentScore;
 }
+maxFriend();
+
+// Find friend with highest score
+function maxFriend() {
+    friendIndex = indexOfMax(scoreArray);
+    bestMatch = dataFile[friendIndex].name;
+    console.log("Best Match: "+bestMatch);
+}
+
+function indexOfMax(arr) {
+    if (arr.length === 0) {
+        return -1;
+    }
+
+    var max = arr[0];
+    var maxIndex = 0;
+
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            maxIndex = i;
+            max = arr[i];
+        }
+    }
+    console.log(arr);
+    return maxIndex;
+}
+

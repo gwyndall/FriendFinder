@@ -4,6 +4,7 @@
 
 var express = require("express");
 var path = require("path");
+var fs = require("fs");
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -28,7 +29,24 @@ app.use(express.json());
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
+// Takes in JSON input
 
+var friends =[];
+app.post("/survey", function(req, res) {
+  // req.body hosts is equal to the JSON post sent from the user
+  // This works because of our body parsing middleware
+  var newMember = req.body;
+
+  // Using a RegEx Pattern to remove spaces from newMember
+  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+  newMember.routeName = newMember.userName.replace(/\s+/g, "").toLowerCase();
+
+  console.log(newMember);
+
+  friends.push(newMember);
+
+  res.json(newMember);
+});
 
 // =============================================================================
 // LISTENER
