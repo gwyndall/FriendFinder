@@ -1,0 +1,33 @@
+{
+    "name": "Ahmed",
+    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "scores": [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+    ]
+}
+{
+    "name": "Charlize",
+    "photo": "",
+    "scores": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        1,
+        2,
+        5,
+        4,
+        1
+    ]
+}
+{"userName":"Jen","photo":"https://vignette.wikia.nocookie.net/muppet/images/f/fb/DC_Jen_3839.jpg/revision/latest?cb=20150806030025","q01":"2","q02":"4","q03":"5","q04":"1","q05":"1","q06":"2","q07":"4","q08":"2","q09":"5","q10":"2"}
